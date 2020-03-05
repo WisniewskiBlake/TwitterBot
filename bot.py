@@ -10,4 +10,8 @@ auth.set_access_token(key, secret)
 api = tweepy.API(auth)
 
 tweets = api.mentions_timeline()
-print(tweets[1].text)
+
+
+
+for tweet in tweets:
+    print(str(tweet.id) + ' - ' + tweet.text)
