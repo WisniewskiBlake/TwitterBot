@@ -14,4 +14,5 @@ tweets = api.mentions_timeline()
 
 
 for tweet in tweets:
-    print(str(tweet.id) + ' - ' + tweet.text)
+    if '#randomtweet' in tweet.text.lower():
+        print(str(tweet.id) + ' - ' + tweet.text)
