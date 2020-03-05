@@ -1,4 +1,5 @@
 import tweepy
+import time
 
 consumer_key = 'O7r4jS9lM1TlTo1cZq0WWUyVt'
 consumer_secret = 'tLCxAAJ4LeITmiKS5uJPqU6yUq3HiBBzYt4wU42HGh4WOl6AXQ'
@@ -23,9 +24,16 @@ def store_last_seen(FILE_NAME, last_seen_id):
     file_write.close()
     return
 
-tweets = api.mentions_timeline(read_last_seen(FILE_NAME), tweet_mode='extended')
-for tweet in tweets:
-    if '#randomtweet' in tweet.full_text.lower():
-        print(str(tweet.id) + ' - ' + tweet.full_text)
+def reply():
+    tweets = api.mentions_timeline(read_last_seen(FILE_NAME), tweet_mode='extended')
+    for tweet in reversed(tweets):
+        if '#randomtweet' in tweet.full_text.lower():
+            print("Replied To ID - " + str(tweet.id))
+            api.update_status("@" + tweet.user.screen_name + " Good Luck For #100DaysOfCode!", tweet.id)
+            api.create_favorite(tweet.id)
+            api.retweet(tweet.id)
+            store_last_seen(FILE_NAME, tweet.id)
 
-        store_last_seen(FILE_NAME, tweet.id)
+while True:
+    reply()
+    time.sleep(2)
