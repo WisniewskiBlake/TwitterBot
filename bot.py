@@ -24,7 +24,7 @@ def store_last_seen(FILE_NAME, last_seen_id):
     file_write.close()
     return
 
-def reply1():
+def reply():
     tweets = api.mentions_timeline(read_last_seen(FILE_NAME), tweet_mode='extended')
     for tweet in reversed(tweets):
         if '#randomtweet' in tweet.full_text.lower():
@@ -35,5 +35,5 @@ def reply1():
             store_last_seen(FILE_NAME, tweet.id)
 
 while True:
-    reply1()
+    reply()
     time.sleep(12)
