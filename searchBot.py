@@ -10,8 +10,8 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(key, secret)
 api = tweepy.API(auth)
 
-hashtag = "100daysofcode"
-tweetNumber = 10
+hashtag = "TheHunt"
+tweetNumber = 3
 
 tweets = tweepy.Cursor(api.search, hashtag).items(tweetNumber)
 
