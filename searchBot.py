@@ -20,9 +20,9 @@ def searchbot():
         try:
             tweet.retweet()
             print("Retweet Done!")
-            time.sleep(2)
+            time.sleep(15)
         except tweepy.TweepError as e:
             print(e.reason)
-            time.sleep(2)
+            time.sleep(15)
 
 searchbot()

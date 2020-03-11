@@ -36,4 +36,4 @@ def reply():
 
 while True:
     reply()
-    time.sleep(12)
+    time.sleep(15)
