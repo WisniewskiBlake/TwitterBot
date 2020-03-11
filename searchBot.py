@@ -1,10 +1,10 @@
 import tweepy
 import time
 
-consumer_key = 'AnoT59dptdzC5EfmP7pKNEOig'
-consumer_secret = 'KdJUnRGWPxzrOuirwNruOFgQlXwbCIOJzodlOnbiKsmhJcEWsS'
-key = '447938059-Z2owpm4FQOXBGGoKXQfC8kCUt4akBk8vde5TOZvZ'
-secret = 'sbp4FCt0okPyeZR64PvTJTLFXcmvWhBPjucBOBZWxFF1e'
+consumer_key = ''
+consumer_secret = ''
+key = ''
+secret = ''
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(key, secret)
