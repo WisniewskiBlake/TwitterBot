@@ -8,3 +8,4 @@ I used VSCode, Tweepy, and the Twitter Developer API to create this bot. There i
 ![](images/2.png)
 
 
+![](images/3.png)
