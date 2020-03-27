@@ -3,7 +3,7 @@ This bot will get Twitter users more followers by increasing attention and engag
 
 I used VSCode, Tweepy, and the Twitter Developer API to create this bot. There is a full tutorial and demo on my YouTube channel located here: https://youtu.be/ewq-91-e2fw
 
-![](images/1.jpeg)
+![](images/1.png)
 
 ![](images/2.png)
 
